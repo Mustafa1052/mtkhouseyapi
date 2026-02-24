@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { PHONE_RAW, WHATSAPP_RAW } from "@/lib/site";
+import { PHONE_RAW, WHATSAPP_URL } from "@/lib/site";
 
 export function MobileStickyBar() {
   return (
@@ -14,7 +14,7 @@ export function MobileStickyBar() {
           Ara
         </a>
         <a
-          href={`https://wa.me/${WHATSAPP_RAW}?text=Merhaba%20MTK%20House,%20teklif%20almak%20istiyorum.`}
+          href={WHATSAPP_URL}
           target="_blank"
           rel="noreferrer"
           className="inline-flex min-h-11 items-center justify-center rounded-lg border border-emerald-400 bg-emerald-600/20 px-3 text-sm font-semibold text-emerald-300"

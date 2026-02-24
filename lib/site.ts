@@ -2,7 +2,9 @@ export const SITE_URL = "https://www.mtkhouseyapi.com";
 export const BRAND = "MTK House";
 export const PHONE_DISPLAY = "0534 226 26 72";
 export const PHONE_RAW = "905342262672";
-export const WHATSAPP_RAW = "905551112233";
+export const WHATSAPP_RAW = "905342262672";
+export const WHATSAPP_URL =
+  "https://api.whatsapp.com/send/?phone=905342262672&text=Merhaba+MTK+House%2C+teklif+almak+istiyorum.&type=phone_number&app_absent=0";
 export const SERVICE_AREA = "Balıkesir ve çevresi";
 export const SECOND_PHONE_DISPLAY = "0507 224 21 10";
 export const SECOND_PHONE_RAW = "905072242110";

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { PHONE_RAW, WHATSAPP_RAW } from "@/lib/site";
+import { PHONE_RAW, WHATSAPP_URL } from "@/lib/site";
 
 function track(eventName: string, data: Record<string, string>) {
   if (typeof window === "undefined") return;
@@ -28,7 +28,7 @@ export function ConversionButtons({ compact = false }: ConversionButtonsProps) {
         Hemen Ara
       </a>
       <a
-        href={`https://wa.me/${WHATSAPP_RAW}?text=Merhaba%20MTK%20House,%20teklif%20almak%20istiyorum.`}
+        href={WHATSAPP_URL}
         target="_blank"
         rel="noreferrer"
         onClick={() => track("generate_lead", { method: "whatsapp" })}

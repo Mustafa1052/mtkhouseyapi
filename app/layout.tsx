@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { Inter, Montserrat } from "next/font/google";
+import { FaInstagram, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import "./globals.css";
 import { ConversionButtons } from "@/components/ConversionButtons";
 import { MobileNav } from "@/components/MobileNav";
@@ -16,6 +17,7 @@ import {
   INSTAGRAM_URL,
   PHONE_DISPLAY,
   PHONE_RAW,
+  WHATSAPP_URL,
   SERVICE_DISTRICTS,
   SECOND_PHONE_DISPLAY,
   SECOND_PHONE_RAW,
@@ -77,12 +79,36 @@ gtag('config', '${gaId}');
                   </Link>
                   <p className="text-sm text-slate-300">{SERVICE_AREA}</p>
                 </div>
-                <a
-                  href={`tel:+${PHONE_RAW}`}
-                  className="inline-flex min-h-11 items-center rounded-full border border-orange-400 px-4 text-sm font-semibold text-orange-300 transition hover:bg-orange-500/20"
-                >
-                  {PHONE_DISPLAY}
-                </a>
+                <div className="flex flex-wrap items-center justify-end gap-2">
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Instagram"
+                    className="inline-flex min-h-11 items-center gap-0 rounded-full border border-fuchsia-400 px-3 text-sm font-semibold text-fuchsia-300 transition hover:bg-fuchsia-500/20 sm:gap-2 sm:px-4"
+                  >
+                    <FaInstagram aria-hidden className="h-4 w-4 shrink-0" />
+                    <span className="hidden sm:inline">Instagram</span>
+                  </a>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="WhatsApp"
+                    className="inline-flex min-h-11 items-center gap-0 rounded-full border border-emerald-400 px-3 text-sm font-semibold text-emerald-300 transition hover:bg-emerald-500/20 sm:gap-2 sm:px-4"
+                  >
+                    <FaWhatsapp aria-hidden className="h-4 w-4 shrink-0" />
+                    <span className="hidden sm:inline">WhatsApp</span>
+                  </a>
+                  <a
+                    href={`tel:+${PHONE_RAW}`}
+                    aria-label={PHONE_DISPLAY}
+                    className="inline-flex min-h-11 items-center gap-0 rounded-full border border-orange-400 px-3 text-sm font-semibold text-orange-300 transition hover:bg-orange-500/20 sm:gap-2 sm:px-4"
+                  >
+                    <FaPhoneAlt aria-hidden className="h-4 w-4 shrink-0" />
+                    <span className="hidden sm:inline">{PHONE_DISPLAY}</span>
+                  </a>
+                </div>
               </div>
               <div className="mt-3 flex items-center justify-between gap-3">
                 <ThemeToggle />

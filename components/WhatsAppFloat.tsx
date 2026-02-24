@@ -1,9 +1,9 @@
-import { WHATSAPP_RAW } from "@/lib/site";
+import { WHATSAPP_URL } from "@/lib/site";
 
 export function WhatsAppFloat() {
   return (
     <a
-      href={`https://wa.me/${WHATSAPP_RAW}?text=Merhaba%20MTK%20House,%20hizmetleriniz%20hakkinda%20bilgi%20almak%20istiyorum.`}
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noreferrer"
       aria-label="WhatsApp ile iletişime geç"

@@ -20,6 +20,7 @@ import {
   PHONE_RAW,
   SECOND_PHONE_DISPLAY,
   SECOND_PHONE_RAW,
+  WHATSAPP_URL,
   contacts,
   SITE_URL,
   faqItems,
@@ -104,7 +105,7 @@ export default function Home() {
     areaServed: "Balıkesir",
     telephone: `+${PHONE_RAW}`,
     url: SITE_URL,
-    sameAs: [`https://wa.me/${PHONE_RAW}`],
+    sameAs: [WHATSAPP_URL],
   };
 
   const faqSchema = {
@@ -195,7 +196,7 @@ export default function Home() {
         <div className="glass-card p-6 md:p-8">
           <h2 className="font-mono text-3xl font-bold text-white">Referans Projeler ve Uygulama Vitrini</h2>
           <p className="mt-3 text-slate-300">
-            Montaj aşamalarından arşiv projelerine kadar seçilmiş görselleri sağa-sola kaydırarak inceleyebilirsiniz.
+            Çalışmalarımızı detaylarıyla keşfetmek için görselleri kaydırın.
           </p>
           <div className="mt-5">
             <HorizontalCardCarousel items={showcaseCards} />
