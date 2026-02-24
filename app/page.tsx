@@ -178,7 +178,7 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {serviceCards.map((service) => (
             <article key={service.title} className="glass-card p-6">
-              <h2 className="font-mono text-2xl font-bold text-white">{service.title}</h2>
+              <h2 className="break-words font-mono text-2xl font-bold text-white">{service.title}</h2>
               <p className="mt-2 text-base leading-relaxed text-slate-300">{service.description}</p>
               <p className="mt-3 text-xs text-slate-400">{service.keywords.join(" | ")}</p>
               <Link
@@ -235,7 +235,7 @@ export default function Home() {
           <h3 className="font-semibold text-white">İletişim Bilgileri</h3>
           <div className="mt-2 space-y-2">
             {contacts.map((contact) => (
-              <p key={contact.name} className="flex items-center gap-2">
+              <p key={contact.name} className="flex flex-wrap items-center gap-2">
                 <FaUserTie className="text-orange-300" />
                 <span>{contact.name}:</span>
                 <a className="text-orange-300 hover:text-orange-200" href={`tel:+${contact.phoneRaw}`}>
@@ -243,21 +243,26 @@ export default function Home() {
                 </a>
               </p>
             ))}
-            <p className="flex items-center gap-2">
+            <p className="flex flex-wrap items-center gap-2">
               <FaSquareEnvelope className="text-orange-300" />
               <span>E-posta:</span>
-              <a className="text-orange-300 hover:text-orange-200" href={`mailto:${CONTACT_EMAIL}`}>
+              <a className="break-all text-orange-300 hover:text-orange-200" href={`mailto:${CONTACT_EMAIL}`}>
                 {CONTACT_EMAIL}
               </a>
             </p>
-            <p className="flex items-center gap-2">
+            <p className="flex flex-wrap items-center gap-2">
               <FaInstagram className="text-orange-300" />
               <span>Instagram:</span>
-              <a className="text-orange-300 hover:text-orange-200" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
+              <a
+                className="break-all text-orange-300 hover:text-orange-200"
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
                 @mtk_celikyapi
               </a>
             </p>
-            <p className="flex items-center gap-2">
+            <p className="flex flex-wrap items-center gap-2">
               <FaPhone className="text-orange-300" />
               <span>Hızlı Arama:</span>
               <a className="text-orange-300 hover:text-orange-200" href={`tel:+${PHONE_RAW}`}>

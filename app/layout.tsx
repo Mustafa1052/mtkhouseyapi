@@ -72,20 +72,20 @@ gtag('config', '${gaId}');
         <header className="sticky top-0 z-40 border-b border-slate-700 bg-slate-950/95 backdrop-blur">
           <div className="section-wrap">
             <div className="py-3">
-              <div className="flex items-center justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <Link href="/" className="font-mono text-2xl font-bold tracking-tight text-white">
+              <div className="flex min-w-0 items-center justify-between gap-2 sm:gap-3">
+                <div className="flex min-w-0 items-center gap-2 sm:gap-3">
+                  <Link href="/" className="shrink-0 font-mono text-xl font-bold tracking-tight text-white sm:text-2xl">
                     {BRAND}
                   </Link>
-                  <p className="text-sm text-slate-300">{SERVICE_AREA}</p>
+                  <p className="hidden truncate text-sm text-slate-300 md:block">{SERVICE_AREA}</p>
                 </div>
-                <div className="flex flex-wrap items-center justify-end gap-2">
+                <div className="flex shrink-0 items-center justify-end gap-1.5 sm:gap-2">
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Instagram"
-                    className="inline-flex min-h-11 items-center gap-0 rounded-full border border-fuchsia-400 px-3 text-sm font-semibold text-fuchsia-300 transition hover:bg-fuchsia-500/20 sm:gap-2 sm:px-4"
+                    className="inline-flex min-h-11 items-center gap-0 rounded-full border border-fuchsia-400 px-2.5 text-sm font-semibold text-fuchsia-300 transition hover:bg-fuchsia-500/20 sm:gap-2 sm:px-4"
                   >
                     <FaInstagram aria-hidden className="h-4 w-4 shrink-0" />
                     <span className="hidden sm:inline">Instagram</span>
@@ -95,7 +95,7 @@ gtag('config', '${gaId}');
                     target="_blank"
                     rel="noreferrer"
                     aria-label="WhatsApp"
-                    className="inline-flex min-h-11 items-center gap-0 rounded-full border border-emerald-400 px-3 text-sm font-semibold text-emerald-300 transition hover:bg-emerald-500/20 sm:gap-2 sm:px-4"
+                    className="inline-flex min-h-11 items-center gap-0 rounded-full border border-emerald-400 px-2.5 text-sm font-semibold text-emerald-300 transition hover:bg-emerald-500/20 sm:gap-2 sm:px-4"
                   >
                     <FaWhatsapp aria-hidden className="h-4 w-4 shrink-0" />
                     <span className="hidden sm:inline">WhatsApp</span>
@@ -103,7 +103,7 @@ gtag('config', '${gaId}');
                   <a
                     href={`tel:+${PHONE_RAW}`}
                     aria-label={PHONE_DISPLAY}
-                    className="inline-flex min-h-11 items-center gap-0 rounded-full border border-orange-400 px-3 text-sm font-semibold text-orange-300 transition hover:bg-orange-500/20 sm:gap-2 sm:px-4"
+                    className="inline-flex min-h-11 items-center gap-0 rounded-full border border-orange-400 px-2.5 text-sm font-semibold text-orange-300 transition hover:bg-orange-500/20 sm:gap-2 sm:px-4"
                   >
                     <FaPhoneAlt aria-hidden className="h-4 w-4 shrink-0" />
                     <span className="hidden sm:inline">{PHONE_DISPLAY}</span>

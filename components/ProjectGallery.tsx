@@ -66,7 +66,7 @@ export function ProjectGallery({ items }: { items: ProjectItem[] }) {
             <div className="p-4">
               <div className="flex items-center gap-2">
                 {categoryIcons[project.category]}
-                <h3 className="text-lg font-bold text-white">{project.title}</h3>
+                <h3 className="break-words text-lg font-bold text-white">{project.title}</h3>
               </div>
               <p className="mt-2 text-sm text-slate-300">{project.description}</p>
             </div>

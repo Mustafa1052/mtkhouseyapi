@@ -30,11 +30,14 @@ export function HorizontalCardCarousel({ items }: HorizontalCardCarouselProps) {
 
   return (
     <div className="relative">
-      <div ref={trackRef} className="flex snap-x gap-5 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <div
+        ref={trackRef}
+        className="flex snap-x gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
         {items.map((item, index) => (
           <article
             key={`${item.title}-${index}`}
-            className="min-w-[280px] snap-start overflow-hidden rounded-xl border border-slate-700 bg-slate-950 md:min-w-[340px]"
+            className="w-[260px] max-w-[82vw] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-700 bg-slate-950 sm:w-[280px] md:w-[340px]"
           >
             <Image
               src={item.src}
@@ -55,7 +58,7 @@ export function HorizontalCardCarousel({ items }: HorizontalCardCarouselProps) {
       <button
         type="button"
         onClick={() => scrollByCards("left")}
-        className="absolute top-20 left-2 z-10 inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-slate-500 bg-slate-950/80 text-slate-100 backdrop-blur transition hover:border-orange-400 hover:text-orange-300 md:top-24"
+        className="absolute top-20 left-1 z-10 inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-slate-500 bg-slate-950/80 text-slate-100 backdrop-blur transition hover:border-orange-400 hover:text-orange-300 md:top-24 md:left-2"
         aria-label="Sola kaydır"
       >
         <FaChevronLeft />
@@ -63,7 +66,7 @@ export function HorizontalCardCarousel({ items }: HorizontalCardCarouselProps) {
       <button
         type="button"
         onClick={() => scrollByCards("right")}
-        className="absolute top-20 right-2 z-10 inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-slate-500 bg-slate-950/80 text-slate-100 backdrop-blur transition hover:border-orange-400 hover:text-orange-300 md:top-24"
+        className="absolute top-20 right-1 z-10 inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-slate-500 bg-slate-950/80 text-slate-100 backdrop-blur transition hover:border-orange-400 hover:text-orange-300 md:top-24 md:right-2"
         aria-label="Sağa kaydır"
       >
         <FaChevronRight />
